@@ -5,12 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Sign in page</h1>
-    <input type="text" id="lemail"><br><br>
-    <input type="password" id="lpass"><br><br>
-    <button onclick="signin()" >Sign up</button>
+<style>
+    body{
+        background-image: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+#main{
+    background-color: aliceblue;
+    margin:auto ;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 0px 10px #000000;
+}
+h1{
+text-transform: uppercase;
+color: brown;
+font-size: 50px;
+position: relative;
+top: 20px;
+}
 
+input {
+        padding: 10px;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input:hover {
+        border-color: #66afe9; 
+    }
+
+    input:focus {
+        border-color: #007bff; 
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5); 
+        color: black;
+    }
+    
+
+label{
+text-transform: uppercase;
+font-size: 20px;
+word-spacing: 1px;
+color: brown;
+
+}
+#inp{
+position: relative;
+top: 15px;
+line-height: 30px;
+border: none;
+}
+input:active{
+border: none;
+}
+button{
+background-color: #3498db;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+top: 5px;
+text-transform: uppercase;
+font-weight: bolder;
+width: 200px;
+}
+button::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.2);
+transform: scaleX(0);
+transform-origin: 0 100%;
+transition: transform 0.3s ease;
+z-index: -1;
+}
+button:hover::before {
+transform: scaleX(1);}
+</style>
+<body>
+    <div id="main">
+    <h1>Sign in page</h1>
+    <label for="">Enter Email:</label><br>  <input type="text" id="lemail"><br><br>
+    <label for="">Enter Password:</label> <br><input type="password" id="lpass"><br><br>
+    <button onclick="signin()" >Sign up</button>
+</div>
 <script src="app.js"></script>    
 </body>
 </html>
